@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
 export default class ToDoList extends Component {
-  render() {
+
+  render() { 
     return (
       <div>
-        {this.props.onShowToDoList}
+        {this.props.todos.map((todo) => <li key={todo.id}>{todo.content}</li>)}
       </div>
     )
   }
+
 }
