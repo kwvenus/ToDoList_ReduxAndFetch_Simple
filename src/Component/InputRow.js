@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ToDoList from './ToDoList';
+import ToDoListContainer from '../Container/ToDoListContainer';
 
 export default class InputRow extends Component {
 
@@ -18,7 +19,7 @@ export default class InputRow extends Component {
         <button onClick={this.clickAdd}>
             add
         </button>
-        <ToDoList todos={this.props.todos}/> 
+        <ToDoListContainer todos={this.props.todos}/> 
       </div>
     )
   }
