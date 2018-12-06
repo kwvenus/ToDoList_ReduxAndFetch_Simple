@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import ToDoList from './ToDoList';
 import ToDoListContainer from '../Container/ToDoListContainer';
 
 export default class InputRow extends Component {
@@ -9,7 +7,6 @@ export default class InputRow extends Component {
         const {input} = this.refs
         this.props.addNewTodo(input.value)
         input.value = ''
-        console.log(this.props.todos)
     }
 
   render() {

@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import InputRow from '../Component/InputRow.js'
 
@@ -11,7 +10,7 @@ const mapDispatchToProps = (dispatch) => ({
     addNewTodo: newTodo => {
       const newTodoItem = {
         content: newTodo,
-        status: "notComplete"
+        status: "active"
       }
       fetch("http://localhost:8080/api/todos", {
         mode: 'cors',
@@ -26,7 +25,7 @@ const mapDispatchToProps = (dispatch) => ({
           payload: {id, status, content}
         })
       })
-    },
+    }
 
     
   })
